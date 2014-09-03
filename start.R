@@ -1,3 +1,4 @@
+install.packages('rJava', repos='http://cran.r-project.org')
 #Install Rserve
 install.packages('Rserve', repos='http://cran.r-project.org')
 

@@ -1,8 +1,8 @@
 # It Builds an image to deploy a Rserve
 
-# Dotcloud ubuntu image
-FROM ubuntu:14.04
-MAINTAINER Felipe Triana, ftrianakast@gmail.com
+# Ubuntu trusty with java7
+FROM tifayuki/java:7
+MAINTAINER Max Tuni, max@predictia.es
 
 # Update
 RUN apt-get update
@@ -18,6 +18,7 @@ RUN apt-get update
 RUN apt-get install -y --force-yes r-base
 RUN apt-get install -y r-base-dev
 RUN R --version
+RUN R CMD javareconf
 
 # Important additional libraries
 RUN apt-get install -y libcurl4-gnutls-dev
