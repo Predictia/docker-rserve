@@ -28,4 +28,4 @@ RUN apt-get install -y libmime-base64-urlsafe-perl libdigest-hmac-perl libdigest
 ADD start.R start.R
 ADD Rserv.conf /Rserv.conf
 EXPOSE 6311
-CMD Rscript start.R
+RUN R CMD Rscript start.R
