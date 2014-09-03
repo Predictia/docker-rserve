@@ -1,7 +1,7 @@
 # It Builds an image to deploy a Rserve
 
-# Ubuntu trusty with java7
-FROM tifayuki/java:7
+# Ubuntu trusty
+FROM ubuntu:14.04
 MAINTAINER Max Tuni, max@predictia.es
 
 # Update
