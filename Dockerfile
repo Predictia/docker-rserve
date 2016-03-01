@@ -4,11 +4,8 @@
 FROM tifayuki/java:7
 MAINTAINER Max Tuni, max@predictia.es
 
-# Update
-RUN apt-get update
-
-# Install wget
-RUN apt-get install -y wget
+# Update and install dependencies
+RUN apt-get update && apt-get install -y wget libssl-dev
 
 # Install latest R
 RUN echo 'deb http://cran.rstudio.com/bin/linux/ubuntu trusty/' >> /etc/apt/sources.list
